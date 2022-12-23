@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    
+    <!--Title of webpage, link to css doc, keywords for browsers, a description, the author, and scaling for different devices-->
+    <head> 
+        <title>Matthew Cacuci - Contact Me</title>
+        
+        <link rel="stylesheet" href="design.css">
+        
+        <meta name="keywords" content="Matthew Cacuci, Cacuci, Matthew Cacuci Las Vegas, Cacuci Las Vegas, Cacuci LV, Matthew Cacuci LV, Matthew Cacuci Piano, Matthew Cacuci Tennis">
+        
+        <meta name="description" content="Hi, my name is Matthew Cacuci and I am a 10th Grader from Las Vegas, Nevada. This is a website that I created by myself from scratch as a fun project. You can contact me using a form on this page.">
+        
+        <meta name="author" content="Matthew Cacuci">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta charset="utf-8">
+    </head>
+    
+    
+    <!--Content of website-->
+    <body>
+        
+        <!--Navigation Bar-->
+        <div class="topnav">
+            <a href="index.html">Home</a>
+            <a href="interests.html">Interests</a>
+            <a href="academics.html">Academics</a>
+            <a href="hobbies.html">Hobbies/Extracurriculars</a>
+            <a href="awards.html">Awards/Accomplishments</a>
+            <a href="community.html">Community Outreach</a>
+            <a class="activePage" href="contact.html">Contact Me</a>
+        </div>
+        
+        
+        <!--Header-->
+        <h1> Contact Me</h1>
+        
+        
+        <!--Content of Page-->
+        <center>    
+            <div class= "content"> 
+                
+                <!--Explanation-->
+               <p class="text2"> If you have any questions or would like to reach out to me, please leave me a message using this form.</p>
+                
+                <!--Contact Form-->
+                <form target="_blank" action="https://formsubmit.co/mdcacuci@gmail.com" method="POST">
+                    <label class="required" for="name"><br>Full Name</label>   <br />
+                    <input id="name" class="input" name="name" type="text" value="" size="50" /><br />
+                    <span id="name_validation" class="error_message"></span>
+                    
+                    <label class="required" for="email">Email Address</label><br />
+                    <input id="email" class="input" name="email" type="text" value="" size="50" /><br />
+                    <span id="email_validation" class="error_message"></span>
+                
+                    <label class="required" for="message">Message</label><br />
+                    <textarea id="message" class="input" name="message" rows="7" cols="100"></textarea><br />
+                    <span id="message_validation" class="error_message"></span>
+                
+    
+                    <input id="submit_button" type="submit" value="Send Message" />
+                    
+                </form>
+            </div>
+        </center>
+        
+        
+        <div class="bottomnav"><p class="text1"> Note: This website is best viewed from a laptop/desktop monitor <br><br> Copyright © 2022 Matthew Cacuci</p></div>
+        
+    </body>
+    
+</html>
