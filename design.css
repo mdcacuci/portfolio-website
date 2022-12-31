@@ -34,6 +34,12 @@ h1{
     font-family: DIN, sans-serif;
 }
 
+@media screen and (max-width: 1000px) {
+    .topnav a{
+        font-size: 13px;
+    }
+}
+
 .topnav a:hover {
     color: #F7F7F7;
 }
