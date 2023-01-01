@@ -17,6 +17,13 @@ h1{
     text-align: center;
 }
 
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 50px;
+    }
+}
+
+
 
 /*navigation bar formats*/
 .topnav {
@@ -74,14 +81,14 @@ h1{
     border-radius: 10px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 700px) {
     .imageColumn {
         flex: 40%;
         max-width: 40%;
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 250px) {
     .imageColumn {
         flex: 90%;
         max-width: 90%;
@@ -104,6 +111,7 @@ h1{
     padding-top: 30px;
     padding-bottom: 30px;
     line-height: 300%;
+    text-align: left;
 }
 
 @media screen and (max-width: 1500px) {
@@ -151,7 +159,6 @@ h1{
     letter-spacing: 5px;
 }
 
-
 .contentColumn {
     flex: 30%;
     max-width: 30%;
@@ -183,7 +190,7 @@ h1{
 label{
     color: #F7F7F7;
     font-size: 20px;
-    font-family: Trebuchet MS, sans-serif;
+    font-family: DIN, sans-serif;
     font-weight: bold;
 }
 
@@ -191,7 +198,7 @@ input[type=text], textarea {
     border-radius: 10px;
     margin-top: 5px;
     margin-bottom: 30px;
-    font-family: Arial, sans-serif;
+    font-family: DIN, sans-serif;
     font-size: 15px;
     text-align: left;
     padding: 10px;
