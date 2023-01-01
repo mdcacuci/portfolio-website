@@ -43,7 +43,7 @@ h1{
 
 @media screen and (max-width: 1000px) {
     .topnav a{
-        font-size: 13px;
+        font-size: 10px;
     }
 }
 
