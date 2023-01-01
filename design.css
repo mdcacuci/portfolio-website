@@ -159,6 +159,27 @@ h1{
     letter-spacing: 5px;
 }
 
+
+@media screen and (max-width: 500px) {
+   .text1{
+    font-size: 15px;
+}
+
+.text2{
+    color: #F7F7F7;
+    font-size: 20px;
+    font-family: DIN, sans-serif;
+}
+
+.text3{
+    color: #6BA9E6;
+    font-size: 21px;
+    font-family: DIN, sans-serif;
+    letter-spacing: 5px;
+}
+
+}
+
 .contentColumn {
     flex: 30%;
     max-width: 30%;
@@ -170,10 +191,13 @@ h1{
     line-height: 250%;   
 }
 
-@media screen and (max-width: 250px) {
+@media screen and (max-width: 750px) {
     .contentColumn {
         flex: 100%;
         max-width: 100%;
+        padding-left: 50px;
+        padding-right: 100px;
+        line-height: 200%;   
     }
 }
 
