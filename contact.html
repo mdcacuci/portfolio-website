@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    
+    <!--Title of webpage, link to css doc, keywords for browsers, a description, the author, and scaling for different devices-->
+    <head> 
+        <title>Matthew Cacuci - Contact Me</title>
+        
+        <link rel="stylesheet" href="design.css">
+        
+        <meta name="description" content="Hi, my name is Matthew Cacuci and I am a 10th Grader from Las Vegas, Nevada. This is a website that I created by myself from scratch as a fun project. You can contact me using a form on this page.">
+        
+        <meta name="author" content="Matthew Cacuci">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta charset="utf-8">
+        
+        <link rel="icon" type="image/x-icon" href="photos/favicon.ico">
+    </head>
+    
+    
+    <!--Content of website-->
+    <body>
+        
+       <!--Navigation Bar-->
+        <div class="topnav">
+            <a href="index.html">HOME</a>
+            <a href="story.html">MY STORY</a>
+            <a href="mission.html">MY MISSION</a>
+            <a href="passions.html">MY PASSIONS</a>
+            <a href="channels.html">MY CHANNELS</a>
+            <a href="accomplishments.html">MY ACCOMPLISHMENTS</a>
+            <a class="activePage" href="contact.html">CONTACT ME</a>
+        </div>
+        
+        
+        <div class="quote">
+            <h1>“An investment in knowledge pays the best interest.”</h1>
+            <p>—Benjamin Franklin</p>
+        </div>
+        
+        
+        <!--Header-->
+        <h1> Contact Me</h1>
+        
+        
+        <!--Content of Page-->
+        <center>    
+            <div class= "content"> 
+                
+                <!--Explanation-->
+               <p class="text2" id="centered"> If you have any questions or feedback, or would like to reach out to me, please send me a message using this form.</p>
+                
+                <!--Contact Form-->
+                <form target="_blank" action="https://formsubmit.co/mdcacuci@gmail.com" method="POST">
+                    <label class="required" for="name"><br>FULL NAME</label>   <br />
+                    <input id="name" class="input" name="name" type="text" value="" size="50" /><br />
+                    <span id="name_validation" class="error_message"></span>
+                    
+                    <label class="required" for="email">EMAIL ADDRESS</label><br />
+                    <input id="email" class="input" name="email" type="text" value="" size="50" /><br />
+                    <span id="email_validation" class="error_message"></span>
+                
+                    <label class="required" for="message">MESSAGE</label><br />
+                    <textarea id="message" class="input" name="message" rows="7" cols="100"></textarea><br />
+                    <span id="message_validation" class="error_message"></span>
+                
+    
+                    <input id="submit_button" type="submit" value="SEND MESSAGE" />
+                    
+                    <p class="text4">This form uses FORMSUBMIT to deliver form results</p>
+                    
+                </form>
+            </div>
+        </center>
+        
+        
+         <div class="bottomnav"><p>This website was designed by Matthew Cacuci 2022-2023 <br><br> This website was created with the free software, Brackets, and hosted using the free service, Github Pages. The domain name <i>cacuci.net</i> was purchased through Google Domains.</p></div>
+        
+    </body>
+    
+</html>
