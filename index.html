@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      
+      
+      
+<!--STYLE-->
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
+  </head>
+    
+    
+    
+  <body>
+    <p>#8005 Mega Meadowbots</p><br>
+    <center><img src="Logo.png" alt="Mega Meadowbots Logo"></center>
+    <h1>Scouting Form</h1><br>
+    
+      
+      
+      
+<!--FORM-->      
+    <form id="form" class="container m-4 pl-4" method="POST">    
+        <div class = "container">     
+
+<!--Basic Info Row-->
+    <hr>
+    <h2>Basic Info</h2>
+    <div class="row" >
+        
+        
+    <!--      Name-->
+          <div class="field, column">
+            <h3 class="label">Name</h3>
+            <div class="control">
+              <input
+                class="input"
+                type="text"
+                placeholder="Your Name"
+                name="Name"
+              required/>
+            </div>
+          </div>
+
+
+    <!--        Team Number-->
+          <div class="field, column">
+            <h3 class="label">Team Number</h3>
+            <div class="control">
+              <input
+                class="input"
+                type="number"
+                placeholder="Team Number"
+                name="Team Number"
+              required/>
+            </div>
+          </div>
+
+
+    <!--        Team Name-->
+          <div class="field, column">
+            <h3 class="label">Team Name</h3>
+            <div class="control">
+              <input
+                class="input"
+                type="text"
+                placeholder="Team Name"
+                name="Team Name"
+              />
+            </div>
+          </div>
+
+
+    <!--        Match Number-->
+          <div class="field, column">
+            <h3 class="label">Match Number</h3>
+            <div class="control">
+              <input
+                class="input"
+                type="number"
+                placeholder="Match Number"
+                name="Match Number"
+              required/>
+            </div>
+          </div>
+        </div>
+  
+            
+            
+<!--Autonmous Row-->
+    <hr>
+    <h2>Autonomous</h2>
+    <div class="row" >
+  
+<!--      Starting Position-->
+          <div class="field, column">
+            <h3>Which Spot did they Start in?</h3>
+              
+              <input type="radio" id="amp" name="Starting Side" value="Amp">
+              <label for="amp">Amp Side</label><br>
+              <input type="radio" id="speaker" name="Starting Side" value="Speaker">
+              <label for="speaker">Speaker Side</label><br>
+              <input type="radio" id="middle" name="Starting Side" value="Middle">
+              <label for="middle">Middle</label><br>
+              
+          </div>         
+        
+        
+    <!--      Program Aspects-->
+          <div class="field, column">
+            <h3>Auto Program Aspects</h3>
+              
+            <div class="control">
+              <input type="hidden" name="Exit Auto?" value="No">           
+              <input type="checkbox" id="option1" name="Exit Auto?" value="Yes">
+              <label for="option1"> Exits Starting Zone</label><br>  
+            </div>  
+              
+            <div class="control">
+              <input type="hidden" name="Speaker Auto?" value="No">     
+              <input type="checkbox" id="option2" name="Speaker Auto?" value="Yes">
+              <label for="option2"> Shoots into Speaker</label><br> 
+            </div>  
+              
+            <div class="control">
+              <input type="hidden" name="Amp Auto?" value="No">     
+              <input type="checkbox" id="option3" name="Amp Auto?" value="Yes">
+              <label for="option3"> Puts Note into Amp</label><br> 
+            </div>    
+              
+              
+          </div>
+
+
+    <!--        Number of Notes Scored-->
+          <div class="field, column">
+            <h3 class="label">How Many Notes in Auto?</h3>
+            <div class="control">
+              <input
+                class="input"
+                type="number"
+                placeholder="# of Notes Scored"
+                name="Num Auto Scored"
+              />
+            </div>
+          </div>
+
+
+    <!--        Auto Notes-->
+          <div class="field, column">
+            <h3 class="label">Additional Notes<br>(Did the program perform as expected? If not, what happened?)</h3>
+            <div class="control">
+              <textarea
+                class="input"
+                type="textarea"
+                placeholder="Auto Notes"
+                name="Auto Notes"
+                    ></textarea>
+            </div>
+          </div>
+        </div>
+            
+<!--Tele-Op Scoring Row-->
+    <hr>
+    <h2>Tele-Op Scoring</h2>
+    <div class="row" >
+        
+        
+    <!--      Where can they score?-->
+          <div class="field, column">
+            <h3>Where can they Score?</h3>
+              
+            <div class="control">
+                <input type="hidden" name="Score Speaker?" value="No"> 
+              <input type="checkbox" id="option1" name="Score Speaker?" value="Yes">
+              <label for="option1"> Speaker</label><br>
+            </div>
+              
+            <div class="control">
+              <input type="hidden" name="Score Amp?" value="No">     
+              <input type="checkbox" id="option2" name="Score Amp?" value="Yes">
+              <label for="option2"> Amp</label><br>
+            </div>  
+              
+              
+            <div class="control">
+              <input type="hidden" name="Score Trap?" value="No">     
+              <input type="checkbox" id="option3" name="Score Trap?" value="Yes">
+              <label for="option3">Trap</label><br> 
+            </div>
+              
+            <div class="control">
+              <input type="hidden" name="Onstage?" value="No">     
+              <input type="checkbox" id="option4" name="Onstage?" value="Yes">
+              <label for="option4">Onstage</label><br> 
+            </div>   
+              
+              
+          </div>
+
+
+    <!--        Notes in Speaker-->
+          <div class="field, column">
+            <h3 class="label">How Many Notes in Speaker<br>during Tele-Op?</h3>
+            <div class="control">
+              <input
+                class="input"
+                type="number"
+                placeholder="Notes in Speaker"
+                name="Notes in Speaker"
+              />
+            </div>
+          </div>
+
+<!--        Notes in Amp-->
+          <div class="field, column">
+            <h3 class="label">How Many Notes in Amp during <br>Tele-Op?</h3>
+            <div class="control">
+              <input
+                class="input"
+                type="number"
+                placeholder="Notes in Amp"
+                name="Notes in Amp"
+              />
+            </div>
+          </div>
+        
+    <!--      Where did they pick up Notes?-->
+          <div class="field, column">
+            <h3>Where did they <br>Pick Up Notes From?</h3>
+              
+            <div class="control">
+              <input type="hidden" name="Intake Ground?" value="No">     
+              <input type="checkbox" id="option1" name="Intake Ground?" value="Yes">
+              <label for="option1"> Ground</label><br>
+            </div>
+              
+            <div class="control">
+              <input type="hidden" name="HP to Robot?" value="No">      
+              <input type="checkbox" id="option2" name="HP to Robot?" value="Yes">
+              <label for="option2"> Human Player into Robot</label><br>
+            </div>  
+              
+            <div class="control">
+              <input type="hidden" name="HP to Ground?" value="No">     
+              <input type="checkbox" id="option3" name="HP to Ground?" value="Yes">
+              <label for="option3">Human Player to Ground</label><br> 
+              </div>            
+          </div>
+
+
+    
+        </div>
+  
+<!--Driving Row-->
+    <hr>
+    <h2>Driving</h2>
+    <div class="row" >
+        
+        
+    <!--      Driving Speed?-->
+          <div class="field, column">
+            <h3>Driving Speed</h3>
+              
+              <input type="radio" id="fast" name="Driving Speed" value="Fast">
+              <label for="fast">Fast</label><br>
+              <input type="radio" id="medium" name="Driving Speed" value="Medium">
+              <label for="medium">Medium</label><br>
+              <input type="radio" id="slow" name="Driving Speed" value="Slow">
+              <label for="slow">Slow</label><br>
+              
+          </div>
+        
+<!--      Driving Efficiency?-->
+          <div class="field, column">
+            <h3>Driving Efficiency</h3>
+              
+              <input type="radio" id="good" name="Driving Efficiency" value="Good">
+              <label for="good">Good Driver (smooth, quick, decisive)</label><br>
+              <input type="radio" id="bad" name="Driving Efficiency" value="Bad">
+              <label for="bad">Bad Driver (rough, accident prone, indecisive)</label><br>
+              <input type="radio" id="middle" name="Driving Efficiency" value="Middle">
+              <label for="middle">Middle Driver (mix of both)</label><br>
+              
+          </div>        
+        
+    <!--        Defensive?-->
+<div class="field, column">
+            <h3>Did they Play Defensively?</h3>
+              
+              <input type="radio" id="yes" name="Defensive?" value="Yes">
+              <label for="yes">Yes</label><br>
+              <input type="radio" id="no" name="Defensive?" value="No">
+              <label for="no">No</label><br>
+              
+          </div>
+
+        
+
+    
+        </div>  
+            
+<!--Human Player Row-->
+    <hr>
+    <h2>Human Player</h2>
+    <div class="row" >
+        
+
+<!--        HP Type-->
+<div class="field, column">
+            <h3>Human Player Type</h3>
+              
+              <input type="radio" id="amp" name="HP Type" value="Amp">
+              <label for="amp">Amp</label><br>
+              <input type="radio" id="source" name="HP Type" value="Source">
+              <label for="source">Source</label><br>
+              
+          </div>
+
+<!--        Coopertition?-->
+<div class="field, column">
+            <h3>Did they Coopertition?</h3>
+              
+              <input type="radio" id="yes" name="Coopertition?" value="Yes">
+              <label for="yes">Yes</label><br>
+              <input type="radio" id="no" name="Coopertition?" value="No">
+              <label for="no">No</label><br>
+              
+          </div>
+        
+<!--      Rating-->
+          <div class="field, column">
+            <h3>Human Player Rating out of 5</h3>
+              
+              <input type="radio" id="1" name="HP Grade" value="1">
+              <label for="1">1</label><br>
+              <input type="radio" id="2" name="HP Grade" value="2">
+              <label for="2">2</label><br>
+              <input type="radio" id="3" name="HP Grade" value="3">
+              <label for="3">3</label><br>
+              <input type="radio" id="4" name="HP Grade" value="4">
+              <label for="4">4</label><br>
+              <input type="radio" id="5" name="HP Grade" value="5">
+              <label for="5">5</label><br>
+              
+          </div>   
+        
+
+        </div>                       
+
+            
+<!--Endgame Row-->
+    <hr>
+    <h2>Endgame</h2>
+    <div class="row" >
+        
+        
+    <!--      Endgame Aspects-->
+          <div class="field, column">
+            <h3>Endgame Aspects</h3>
+              
+            <div class="control">
+              <input type="hidden" name="Climb Chain?" value="No">     
+              <input type="checkbox" id="option1" name="Climb Chain?" value="Yes">
+              <label for="option1"> Climbs Chain</label><br>  
+            </div>
+              
+            <div class="control">
+              <input type="hidden" name="Trap?" value="No">     
+              <input type="checkbox" id="option2" name="Trap?" value="Yes">
+              <label for="option2"> Scores in Trap</label><br>  
+            </div>  
+              
+            <div class="control">
+              <input type="hidden" name="Park?" value="No">      
+              <input type="checkbox" id="option3" name="Park?" value="Yes">
+              <label for="option3"> Parks at Chain</label><br> 
+            </div>    
+              
+              
+          </div>
+
+<!--        Spotlight?-->
+<div class="field, column">
+            <h3>Did they Spotlight?</h3>
+              
+              <input type="radio" id="yes" name="Spotlight?" value="Yes">
+              <label for="yes">Yes</label><br>
+              <input type="radio" id="no" name="Spotlight?" value="No">
+              <label for="no">No</label><br>
+              
+          </div>
+
+<!--        Harmonize?-->
+<div class="field, column">
+            <h3>Did they Harmonize?</h3>
+              
+              <input type="radio" id="yes" name="Harmonize?" value="Yes">
+              <label for="yes">Yes</label><br>
+              <input type="radio" id="no" name="Harmonize?" value="No">
+              <label for="no">No</label><br>
+              
+          </div>
+        
+
+        </div>            
+         
+<!--Overall Row-->
+    <hr>
+    <h2>Overall</h2>
+    <div class="row" >
+        
+        
+    <!--        Overall Notes-->
+          <div class="field, column">
+            <h3 class="label"> Additional notes <br>(Weird occurrences, damage, stoppages)</h3>
+            <div class="control">
+              <textarea
+                class="input"
+                type="textarea"
+                placeholder="Overall Notes"
+                name="Overall Notes"
+                    ></textarea>
+            </div>
+          </div>
+ 
+        <!--      Rating-->
+          <div class="field, column">
+            <h3>Overall Rating Out of 10</h3>
+              
+              <input type="radio" id="1" name="Rating" value="1">
+              <label for="1">1</label>
+              <input type="radio" id="2" name="Rating" value="2">
+              <label for="2">2</label><br>
+              <input type="radio" id="3" name="Rating" value="3">
+              <label for="3">3</label>
+              <input type="radio" id="4" name="Rating" value="4">
+              <label for="4">4</label><br>
+              <input type="radio" id="5" name="Rating" value="5">
+              <label for="5">5</label>
+              <input type="radio" id="6" name="Rating" value="6">
+              <label for="6">6</label><br>
+              <input type="radio" id="7" name="Rating" value="7">
+              <label for="7">7</label>
+              <input type="radio" id="8" name="Rating" value="8">
+              <label for="8">8</label><br>
+              <input type="radio" id="9" name="Rating" value="9">
+              <label for="9">9</label>
+              <input type="radio" id="10" name="Rating" value="0">
+              <label for="10">10</label><br>
+              
+          </div>   
+        
+        
+        </div>            
+            
+            
+<!--SUBMIT FORM-->
+           <br><br>
+          <center>
+          <div class="field is-grouped">
+            <div class="control">
+              <button class="button is-primary" type="submit" id="submit-button">
+                Submit
+              </button>
+            </div>
+
+          </div>
+          </center>
+        </div>
+    </form>
+    <div
+      id="message"
+      style="
+        display: none;
+        margin: 20px;
+        font-weight: bold;
+        color: green;
+        padding: 8px;
+        background-color: beige;
+        border-radius: 4px;
+        border-color: aquamarine;
+      "
+    ></div>
+
+    <script>
+      document.getElementById("form").addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent the default form submission
+        document.getElementById("message").textContent = "Submitting...";
+        document.getElementById("message").style.display = "block";
+        document.getElementById("submit-button").disabled = true;
+        document.getElementById("message").style.backgroundColor = "blue";
+        document.getElementById("message").style.color = "beige";
+
+        // Collect the form data
+        var formData = new FormData(this);
+        var keyValuePairs = [];
+        for (var pair of formData.entries()) {
+          keyValuePairs.push(pair[0] + "=" + pair[1]);
+        }
+
+        var formDataString = keyValuePairs.join("&");
+
+        // Send a POST request to your Google Apps Script
+        fetch(
+          "https://script.google.com/macros/s/AKfycbzT6qvXySuyE8MTvsUyhoSzBrzZFZvX7dmGHmP0ZiqY6WfOX5VTFvXF7ufONaplYI48/exec",
+          {
+            redirect: "follow",
+            method: "POST",
+            body: formDataString,
+            headers: {
+              "Content-Type": "text/plain;charset=utf-8",
+            },
+          }
+        )
+          .then(function (response) {
+            // Check if the request was successful
+            if (response) {
+              return response; // Assuming your script returns JSON response
+            } else {
+              throw new Error("Failed to submit the form.");
+            }
+          })
+          .then(function (data) {
+            // Display a success message
+            document.getElementById("message").textContent =
+              "Data submitted successfully!";
+            document.getElementById("message").style.display = "block";
+            document.getElementById("message").style.backgroundColor = "green";
+            document.getElementById("message").style.color = "beige";
+            document.getElementById("submit-button").disabled = false;
+            document.getElementById("form").reset();
+
+            setTimeout(function () {
+              document.getElementById("message").textContent = "";
+              document.getElementById("message").style.display = "none";
+            }, 2600);
+          })
+          .catch(function (error) {
+            // Display a success message
+            document.getElementById("message").textContent =
+              "Data submitted successfully!";
+            document.getElementById("message").style.display = "block";
+            document.getElementById("message").style.backgroundColor = "green";
+            document.getElementById("message").style.color = "beige";
+            document.getElementById("submit-button").disabled = false;
+            document.getElementById("form").reset();
+
+            setTimeout(function () {
+              document.getElementById("message").textContent = "";
+              document.getElementById("message").style.display = "none";
+            }, 2600);
+            
+          });
+      });
+    </script>
+  </body>
+</html>
