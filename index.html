@@ -100,11 +100,11 @@
             <h3>Which Spot did they Start in?</h3>
               
               <input type="radio" id="amp" name="Starting Side" value="Amp">
-              <label for="amp">Amp Side</label><br>
+              <label for="amp">Amp</label><br>
               <input type="radio" id="speaker" name="Starting Side" value="Speaker">
-              <label for="speaker">Speaker Side</label><br>
-              <input type="radio" id="middle" name="Starting Side" value="Middle">
-              <label for="middle">Middle</label><br>
+              <label for="speaker">Speaker</label><br>
+              <input type="radio" id="source" name="Starting Side" value="Source">
+              <label for="source">Source</label><br>
               
           </div>         
         
@@ -129,7 +129,13 @@
               <input type="hidden" name="Amp Auto?" value="No">     
               <input type="checkbox" id="option3" name="Amp Auto?" value="Yes">
               <label for="option3"> Puts Note into Amp</label><br> 
-            </div>    
+            </div>
+              
+            <div class="control">
+              <input type="hidden" name="Has Auto?" value="No">     
+              <input type="checkbox" id="option4" name="Have Auto?" value="Yes">
+              <label for="option4">They Don't Have an Auto</label><br> 
+            </div>  
               
               
           </div>
@@ -151,14 +157,14 @@
 
     <!--        Auto Notes-->
           <div class="field, column">
-            <h3 class="label">Additional Notes<br>(Did the program perform as expected? If not, what happened?)</h3>
+            <h3 class="label">Additional Notes<br>(Did the program perform as expected? If not, what happened?)<br>(Required)</h3>
             <div class="control">
               <textarea
                 class="input"
                 type="textarea"
                 placeholder="Auto Notes"
                 name="Auto Notes"
-                    ></textarea>
+                    required></textarea>
             </div>
           </div>
         </div>
@@ -184,19 +190,7 @@
               <input type="checkbox" id="option2" name="Score Amp?" value="Yes">
               <label for="option2"> Amp</label><br>
             </div>  
-              
-              
-            <div class="control">
-              <input type="hidden" name="Score Trap?" value="No">     
-              <input type="checkbox" id="option3" name="Score Trap?" value="Yes">
-              <label for="option3">Trap</label><br> 
-            </div>
-              
-            <div class="control">
-              <input type="hidden" name="Onstage?" value="No">     
-              <input type="checkbox" id="option4" name="Onstage?" value="Yes">
-              <label for="option4">Onstage</label><br> 
-            </div>   
+               
               
               
           </div>
@@ -410,20 +404,19 @@
          
 <!--Overall Row-->
     <hr>
-    <h2>Overall</h2>
+    <h2>Overall (Required)</h2>
     <div class="row" >
         
         
     <!--        Overall Notes-->
           <div class="field, column">
-            <h3 class="label"> Additional notes <br>(Weird occurrences, damage, stoppages)</h3>
+            <h3 class="label"> Additional notes <br>(Weird occurrences, damage, stoppages, general feelings about the team)</h3>
             <div class="control">
               <textarea
                 class="input"
                 type="textarea"
                 placeholder="Overall Notes"
-                name="Overall Notes"
-                    ></textarea>
+                name="Overall Notes" required></textarea>
             </div>
           </div>
  
