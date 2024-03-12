@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="style.css"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   </head>
     
     
@@ -468,6 +469,10 @@
         border-color: aquamarine;
       "
     ></div>
+            
+    <center>
+      <div id="qrcode"></div><br><br>
+      </center>         
 
             
 <!--SUBMIT FORM-->
@@ -476,8 +481,11 @@
           <div class="field is-grouped">
             <div class="control">
               <button class="button is-primary" type="submit" id="submit-button">
-                Submit
+                Submit Online
               </button>
+              <button class="button is-primary" type="button" id="generate-qr">
+                Make QR Code
+              </button>    
             </div>
 
           </div>
@@ -486,7 +494,7 @@
     </form>
     
     <script>
-      document.getElementById("form").addEventListener("submit", function (e) {
+        document.getElementById("form").addEventListener("submit", function (e) {
         e.preventDefault(); // Prevent the default form submission
         document.getElementById("message").textContent = "Submitting...";
         document.getElementById("message").style.display = "block";
@@ -555,6 +563,32 @@
             
           });
       });
+    </script>     
+
+    <script>
+      document.getElementById("generate-qr").addEventListener("click", function (e) {
+        e.preventDefault(); // Prevent the default form submission
+        generateQRCode(); // Generate QR code
+      });
+
+      function generateQRCode() {
+        document.getElementById("qrcode").innerHTML = "";  
+        var formData = new FormData(document.getElementById("form"));
+        var keyValuePairs = [];
+        for (var pair of formData.entries()) {
+          keyValuePairs.push(pair[0] + "=" + pair[1]);
+        }
+        var formDataString = keyValuePairs.join("&");
+        
+        // Generate QR code
+        var qr = new QRCode(document.getElementById("qrcode"), {
+          text: formDataString,
+          width: 256,
+          height: 256,
+        });
+      }
     </script>
+      
+      
   </body>
 </html>
