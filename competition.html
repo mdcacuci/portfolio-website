@@ -515,6 +515,7 @@
           {
             redirect: "follow",
             method: "POST",
+            mode: 'no-cors',
             body: formDataString,
             headers: {
               "Content-Type": "text/plain;charset=utf-8",
@@ -547,17 +548,12 @@
           .catch(function (error) {
             // Display a success message
             document.getElementById("message").textContent =
-              "Data submitted successfully!";
+              "Failed to submit the form";
             document.getElementById("message").style.display = "block";
-            document.getElementById("message").style.backgroundColor = "green";
+            document.getElementById("message").style.backgroundColor = "red";
             document.getElementById("message").style.color = "beige";
             document.getElementById("submit-button").disabled = false;
-            document.getElementById("form").reset();
 
-            setTimeout(function () {
-              document.getElementById("message").textContent = "";
-              document.getElementById("message").style.display = "none";
-            }, 2600);
             
           });
       });
