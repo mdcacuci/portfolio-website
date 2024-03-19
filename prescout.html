@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      
+      
+      
+<!--STYLE-->
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  </head>
+    
+    
+    
+  <body>
+    
+    <a href="/">Practice</a>
+    <a href="/prescout" class="current">Prescouting</a>
+    <a href="/competition">Competition</a>
+      
+    <p>#8005 Mega Meadowbots</p><br>
+    <center><img src="Logo.png" alt="Mega Meadowbots Logo"></center>
+    <h1>Prescouting Form</h1><br>
+    
+      
+      
+      
+<!--FORM-->      
+    <form id="form" class="container m-4 pl-4" method="POST">    
+        <div class = "container">     
+
+<!--Basic Info Row-->
+    <hr>
+    <h2>Basic Info</h2>
+    <div class="row" >
+        
+        
+    <!--      Name-->
+          <div class="field, column">
+            <h3 class="label">Name</h3>
+            <div class="control">
+              <input
+                class="input"
+                type="text"
+                placeholder="Your Name"
+                name="Name"
+              required/>
+            </div>
+          </div>
+
+
+    <!--        Team Number-->
+          <div class="field, column">
+            <h3 class="label">Team Number</h3>
+            <div class="control">
+              <input
+                class="input"
+                type="number"
+                placeholder="Team Number"
+                name="Team Number"
+              required/>
+            </div>
+          </div>
+
+
+    <!--        Team Name-->
+          <div class="field, column">
+            <h3 class="label">Team Name</h3>
+            <div class="control">
+              <input
+                class="input"
+                type="text"
+                placeholder="Team Name"
+                name="Team Name"
+              />
+            </div>
+          </div>
+
+        </div>
+  
+            
+            
+<!--Robot-->
+    <hr>
+    <h2>Robot Details</h2>
+    <div class="row" >
+  
+<!--      Drive Type-->
+          <div class="field, column">
+            <h3>Drive Type</h3>
+              
+              <input type="radio" id="swerve" name="Drive Type" value="Swerve">
+              <label for="swerve">Swerve</label><br>
+              <input type="radio" id="tank" name="Drive Type" value="Tank">
+              <label for="tank">Tank</label><br>
+              
+          </div>  
+        
+        <!--        Robot Weight-->
+          <div class="field, column">
+            <h3 class="label">Robot Weight</h3>
+            <div class="control">
+              <input
+                class="input"
+                type="text"
+                placeholder="XXXX pounds"
+                name="Robot Weight"
+              />
+            </div>
+          </div>
+        
+        <!--        Robot Dimensions-->
+          <div class="field, column">
+            <h3 class="label">Robot Dimensions</h3>
+            <div class="control">
+              <input
+                class="input"
+                type="text"
+                placeholder="X by Y by Z inches"
+                name="Robot Dimensions"
+              />
+            </div>
+          </div>
+        
+<!--      Capabilities-->
+          <div class="field, column">
+            <h3>Robot Capabilities</h3>
+              
+            <div class="control">
+              <input type="hidden" name="Score Amp?" value="No">           
+              <input type="checkbox" id="option1" name="Score Amp?" value="Yes">
+              <label for="option1">Score in Amp</label><br>  
+            </div>  
+              
+            <div class="control">
+              <input type="hidden" name="Score Speaker?" value="No">     
+              <input type="checkbox" id="option2" name="Score Speaker?" value="Yes">
+              <label for="option2">Score in Speaker</label><br> 
+            </div>  
+              
+            <div class="control">
+              <input type="hidden" name="Climbs?" value="No">     
+              <input type="checkbox" id="option3" name="Climbs?" value="Yes">
+              <label for="option3">Climb Chain</label><br> 
+            </div>    
+              
+            <div class="control">
+              <input type="hidden" name="Score Trap?" value="No">     
+              <input type="checkbox" id="option4" name="Score Trap?" value="Yes">
+              <label for="option4">Score in Trap</label><br> 
+            </div>  
+              
+            <div class="control">
+              <input type="hidden" name="Intake?" value="No">     
+              <input type="checkbox" id="option5" name="Intake?" value="Yes">
+              <label for="option5">Intake Notes</label><br> 
+            </div>  
+              
+              
+          </div>     
+            </div>
+        
+            
+<!--Auto Row-->
+    <hr>
+    <h2>Autonomous</h2>
+    <div class="row" >
+        
+        
+    <!--      Starting Spots-->
+          <div class="field, column">
+            <h3>Starting Spots</h3>
+              
+            <div class="control">
+              <input type="hidden" name="Amp Start?" value="No">           
+              <input type="checkbox" id="option1" name="Amp Start?" value="Yes">
+              <label for="option1">Amp</label><br>  
+            </div>  
+              
+            <div class="control">
+              <input type="hidden" name="Speaker Start?" value="No">     
+              <input type="checkbox" id="option2" name="Speaker Start?" value="Yes">
+              <label for="option2">Speaker</label><br> 
+            </div>  
+              
+            <div class="control">
+              <input type="hidden" name="Source Start?" value="No">     
+              <input type="checkbox" id="option3" name="Source Start?" value="Yes">
+              <label for="option3">Source</label><br> 
+            </div>
+              
+            <div class="control">
+              <input type="hidden" name="No Auto?" value="No">     
+              <input type="checkbox" id="option4" name="No Auto?" value="Yes">
+              <label for="option4">Doesn't Matter, they don't have an Auto</label><br> 
+            </div>  
+              
+              
+          </div>
+
+
+
+    <!--        Auto Notes-->
+          <div class="field, column">
+            <h3 class="label">Additional Notes<br>(Details about programs, where they go, where they score, consistency, etc.)<br>(Required)</h3>
+            <div class="control">
+              <textarea
+                class="input"
+                type="textarea"
+                placeholder="Auto Notes"
+                name="Auto Notes"
+                    required></textarea>
+            </div>
+          </div>
+        </div>
+         
+<!--Overall Row-->
+    <hr>
+    <h2>Overall (Required)</h2>
+    <div class="row" >
+        
+        
+    <!--        Overall Notes-->
+          <div class="field, column">
+            <h3 class="label"> Additional notes <br>(general feelings about the team/robot, are they weak/strong?, etc.)</h3>
+            <div class="control">
+              <textarea
+                class="input"
+                type="textarea"
+                placeholder="Additional Notes"
+                name="Overall Notes" required></textarea>
+            </div>
+          </div>
+ 
+        <!--      Rating-->
+          <div class="field, column">
+            <h3>Overall Rating Out of 10</h3>
+              
+              <input type="radio" id="1" name="Rating" value="1">
+              <label for="1">1</label>
+              <input type="radio" id="2" name="Rating" value="2">
+              <label for="2">2</label><br>
+              <input type="radio" id="3" name="Rating" value="3">
+              <label for="3">3</label>
+              <input type="radio" id="4" name="Rating" value="4">
+              <label for="4">4</label><br>
+              <input type="radio" id="5" name="Rating" value="5">
+              <label for="5">5</label>
+              <input type="radio" id="6" name="Rating" value="6">
+              <label for="6">6</label><br>
+              <input type="radio" id="7" name="Rating" value="7">
+              <label for="7">7</label>
+              <input type="radio" id="8" name="Rating" value="8">
+              <label for="8">8</label><br>
+              <input type="radio" id="9" name="Rating" value="9">
+              <label for="9">9</label>
+              <input type="radio" id="10" name="Rating" value="10">
+              <label for="10">10</label><br>
+              
+          </div>   
+        
+        
+        </div>            
+            <div
+      id="message"
+      style="
+        display: none;
+        margin: 20px;
+        font-weight: bold;
+        color: green;
+        padding: 8px;
+        background-color: beige;
+        border-radius: 4px;
+        border-color: aquamarine;
+      "
+    ></div>
+            
+    <center>
+      <div id="qrcode"></div><br><br>
+      </center>         
+
+            
+<!--SUBMIT FORM-->
+           <br><br>
+          <center>
+          <div class="field is-grouped">
+            <div class="control">
+              <button class="button is-primary" type="submit" id="submit-button">
+                Submit Online
+              </button>
+              <button class="button is-primary" type="button" id="generate-qr">
+                Generate QR Code
+              </button>    
+            </div>
+
+          </div>
+          </center>
+        </div>
+    </form>
+    
+    <script>
+        document.getElementById("form").addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent the default form submission
+        document.getElementById("message").textContent = "Submitting...";
+        document.getElementById("message").style.display = "block";
+        document.getElementById("submit-button").disabled = true;
+        document.getElementById("message").style.backgroundColor = "lightblue";
+        document.getElementById("message").style.color = "black";
+
+        // Collect the form data
+        var formData = new FormData(this);
+        var keyValuePairs = [];
+        for (var pair of formData.entries()) {
+          keyValuePairs.push(pair[0] + "=" + pair[1]);
+        }
+
+        var formDataString = keyValuePairs.join("&");
+
+        // Send a POST request to your Google Apps Script
+        fetch(
+          "https://script.google.com/macros/s/AKfycbz2YGCOVEB3NJb6_efpy3FnGBerN1cVrvLYnd6D5pJtm1tIlLh6U9NQLvaCl28t2Uh1Ow/exec",
+          {
+            redirect: "follow",
+            method: "POST",
+            body: formDataString,
+            headers: {
+              "Content-Type": "text/plain;charset=utf-8",
+            },
+          }
+        )
+          .then(function (response) {
+            // Check if the request was successful
+            if (response) {
+              return response; // Assuming your script returns JSON response
+            } else {
+              throw new Error("Failed to submit the form.");
+            }
+          })
+          .then(function (data) {
+            // Display a success message
+            document.getElementById("message").textContent =
+              "Data submitted successfully!";
+            document.getElementById("message").style.display = "block";
+            document.getElementById("message").style.backgroundColor = "green";
+            document.getElementById("message").style.color = "beige";
+            document.getElementById("submit-button").disabled = false;
+            document.getElementById("form").reset();
+
+            setTimeout(function () {
+              document.getElementById("message").textContent = "";
+              document.getElementById("message").style.display = "none";
+            }, 2600);
+          })
+          .catch(function (error) {
+            // Display a success message
+            document.getElementById("message").textContent =
+              "Data submitted successfully!";
+            document.getElementById("message").style.display = "block";
+            document.getElementById("message").style.backgroundColor = "green";
+            document.getElementById("message").style.color = "beige";
+            document.getElementById("submit-button").disabled = false;
+            document.getElementById("form").reset();
+
+            setTimeout(function () {
+              document.getElementById("message").textContent = "";
+              document.getElementById("message").style.display = "none";
+            }, 2600);
+            
+          });
+      });
+    </script>     
+
+    <script>
+      document.getElementById("generate-qr").addEventListener("click", function (e) {
+        e.preventDefault(); // Prevent the default form submission
+        generateQRCode(); // Generate QR code
+      });
+
+      function generateQRCode() {
+        document.getElementById("qrcode").innerHTML = "";  
+        var formData = new FormData(document.getElementById("form"));
+        var keyValuePairs = [];
+        for (var pair of formData.entries()) {
+          keyValuePairs.push(pair[0] + "=" + pair[1]);
+        }
+        var formDataString = keyValuePairs.join("&");
+        
+        // Generate QR code
+        var qr = new QRCode(document.getElementById("qrcode"), {
+          text: formDataString,
+          width: 256,
+          height: 256,
+        });
+      }
+    </script>
+      
+      
+  </body>
+</html>
