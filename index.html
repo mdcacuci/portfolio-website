@@ -158,11 +158,24 @@
               />
             </div>
           </div>
+        
+    <!--        Number of Notes Went for-->
+          <div class="field, column">
+            <h3 class="label">How Many Notes did they go for?</h3>
+            <div class="control">
+              <input
+                class="input"
+                type="number"
+                placeholder="# of Notes Attempted"
+                name="Num Auto Attempted"
+              />
+            </div>
+          </div>    
 
 
     <!--        Auto Notes-->
           <div class="field, column">
-            <h3 class="label">Additional Notes<br>(Did the program perform as expected? If not, what happened?)<br>(Required)</h3>
+            <h3 class="label">Additional Notes<br>(Did the program perform as expected? If not, what happened? Where did the robot end up?)<br>(Required)</h3>
             <div class="control">
               <textarea
                 class="input"
@@ -273,6 +286,19 @@
               
           </div>
         
+     <!--      Cycle Time?-->
+          <div class="field, column">
+            <h3>Cycle Time</h3>
+              
+              <input type="radio" id="fast" name="Cycle Time" value="Fast">
+              <label for="fast">Fast</label><br>
+              <input type="radio" id="medium" name="Cycle Time" value="Medium">
+              <label for="medium">Medium</label><br>
+              <input type="radio" id="slow" name="Cycle Time" value="Slow">
+              <label for="slow">Slow</label><br>
+              
+          </div>    
+        
 <!--      Driving Efficiency?-->
           <div class="field, column">
             <h3>Driving Efficiency</h3>
@@ -300,55 +326,7 @@
         
 
     
-        </div>  
-            
-<!--Human Player Row-->
-    <hr>
-    <h2>Human Player</h2>
-    <div class="row" >
-        
-
-<!--        HP Type-->
-<div class="field, column">
-            <h3>Human Player Type</h3>
-              
-              <input type="radio" id="amp" name="HP Type" value="Amp">
-              <label for="amp">Amp</label><br>
-              <input type="radio" id="source" name="HP Type" value="Source">
-              <label for="source">Source</label><br>
-              
-          </div>
-
-<!--        Coopertition?-->
-<div class="field, column">
-            <h3>Did they Coopertition?</h3>
-              
-              <input type="radio" id="yes" name="Coopertition?" value="Yes">
-              <label for="yes">Yes</label><br>
-              <input type="radio" id="no" name="Coopertition?" value="No">
-              <label for="no">No</label><br>
-              
-          </div>
-        
-<!--      Rating-->
-          <div class="field, column">
-            <h3>Human Player Rating out of 5</h3>
-              
-              <input type="radio" id="1" name="HP Grade" value="1">
-              <label for="1">1</label><br>
-              <input type="radio" id="2" name="HP Grade" value="2">
-              <label for="2">2</label><br>
-              <input type="radio" id="3" name="HP Grade" value="3">
-              <label for="3">3</label><br>
-              <input type="radio" id="4" name="HP Grade" value="4">
-              <label for="4">4</label><br>
-              <input type="radio" id="5" name="HP Grade" value="5">
-              <label for="5">5</label><br>
-              
-          </div>   
-        
-
-        </div>                       
+        </div>                  
 
             
 <!--Endgame Row-->
@@ -411,6 +389,17 @@
     <hr>
     <h2>Overall (Required)</h2>
     <div class="row" >
+        
+<!--     Coopertition   -->
+    <div class="field, column">
+            <h3>Did they Coopertition at all?</h3>
+              
+              <input type="radio" id="yes" name="Coopertition?" value="Yes">
+              <label for="yes">Yes</label><br>
+              <input type="radio" id="no" name="Coopertition?" value="No">
+              <label for="no">No</label><br>
+              
+          </div>
         
         
     <!--        Overall Notes-->
