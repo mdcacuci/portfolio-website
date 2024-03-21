@@ -148,34 +148,38 @@
 
     <!--        Number of Notes Scored-->
           <div class="field, column">
-            <h3 class="label">How Many Notes in Auto?</h3>
-            <div class="control">
+            <h3 class="label">How Many Notes did they Successfully Score?</h3>
+             <div class="increase">
+                 <button class="button decrease" type = "button">-</button>
               <input
                 class="input"
                 type="number"
-                placeholder="# of Notes Scored"
+                placeholder="0"
                 name="Num Auto Scored"
               required/>
+                <button class="button button_increase" type = "button">+</button>
             </div>
           </div>
         
     <!--        Number of Notes Went for-->
           <div class="field, column">
-            <h3 class="label">How Many Notes did they go for?</h3>
-            <div class="control">
+            <h3 class="label">How Many Notes did they Attempt to Score?</h3>
+            <div class="increase">
+                 <button class="button decrease" type = "button">-</button>
               <input
                 class="input"
                 type="number"
-                placeholder="# of Notes Attempted"
+                placeholder="0"
                 name="Num Auto Attempted"
               required/>
+                <button class="button button_increase" type = "button">+</button>
             </div>
           </div>    
 
 
     <!--        Auto Notes-->
           <div class="field, column">
-            <h3 class="label">Additional Notes<br>(Did the program perform as expected? If not, what happened? Where did the robot end up?)<br>(Required)</h3>
+            <h3 class="label">Additional Notes<br>(Did the program perform as expected?<br> If not, what happened? Where did the robot end up?)<br>(Required)</h3>
             <div class="control">
               <textarea
                 class="input"
@@ -217,26 +221,30 @@
     <!--        Notes in Speaker-->
           <div class="field, column">
             <h3 class="label">How Many Notes in Speaker<br>during Tele-Op?</h3>
-            <div class="control">
+            <div class="increase">
+                 <button class="button decrease" type = "button">-</button>
               <input
                 class="input"
                 type="number"
-                placeholder="Notes in Speaker"
+                placeholder="0"
                 name="Notes in Speaker"
               required/>
+                <button class="button button_increase" type = "button">+</button>
             </div>
           </div>
 
 <!--        Notes in Amp-->
           <div class="field, column">
             <h3 class="label">How Many Notes in Amp during <br>Tele-Op?</h3>
-            <div class="control">
+            <div class="increase">
+                 <button class="button decrease" type = "button">-</button>
               <input
                 class="input"
                 type="number"
-                placeholder="Notes in Amp"
+                placeholder="0"
                 name="Notes in Amp"
               required/>
+                <button class="button button_increase" type = "button">+</button>
             </div>
           </div>
         
@@ -570,6 +578,29 @@
           height: 256,
         });
       }
+      
+      document.addEventListener('DOMContentLoaded', function() {
+    const increaseButtons = document.querySelectorAll('.button_increase');
+    const decreaseButtons = document.querySelectorAll('.decrease');
+
+    increaseButtons.forEach(function(button) {
+      button.addEventListener('click', function(event) {
+        event.preventDefault();
+        const input = event.target.parentNode.querySelector('input[type="number"]');
+        input.stepUp();
+      });
+    });
+
+    decreaseButtons.forEach(function(button) {
+      button.addEventListener('click', function(event) {
+        event.preventDefault();
+        const input = event.target.parentNode.querySelector('input[type="number"]');
+        input.stepDown();
+      });
+    });
+  });
+
+        
     </script>
       
       
