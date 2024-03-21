@@ -98,35 +98,19 @@
               
           </div>  
         
-        <!--        Robot Weight-->
-          <div class="field, column">
-            <h3 class="label">Robot Weight</h3>
-            <div class="control">
-              <input
-                class="input"
-                type="text"
-                placeholder="XXXX pounds"
-                name="Robot Weight"
-              />
-            </div>
-          </div>
-        
-        <!--        Robot Dimensions-->
-          <div class="field, column">
-            <h3 class="label">Robot Dimensions</h3>
-            <div class="control">
-              <input
-                class="input"
-                type="text"
-                placeholder="X by Y by Z inches"
-                name="Robot Dimensions"
-              />
-            </div>
+        <div class="field, column">
+            <h3>Did they Fit Under the Chain?</h3>
+              
+              <input type="radio" id="yes" name="Fit under Chain?" value="Yes">
+              <label for="yes">Yes</label><br>
+              <input type="radio" id="no" name="Fit under Chain?" value="No">
+              <label for="no">No</label><br>
+              
           </div>
         
 <!--      Capabilities-->
           <div class="field, column">
-            <h3>Robot Capabilities</h3>
+            <h3>Robot Capabilities <br>(If yes, describe how and with what mechanisms)</h3>
               
             <div class="control">
               <input type="hidden" name="Score Amp?" value="No">           
@@ -221,6 +205,18 @@
     <h2>Overall (Required)</h2>
     <div class="row" >
         
+    <!--        Number of Batteries-->
+          <div class="field, column">
+            <h3 class="label">Number of Batteries</h3>
+            <div class="control">
+              <input
+                class="input"
+                type="number"
+                placeholder="# of batteries"
+                name="Num Batteries"
+              />
+            </div>
+          </div>    
         
     <!--        Overall Notes-->
           <div class="field, column">
