@@ -184,6 +184,7 @@ a.current {
 #auto {
     text-align: center;
     width: 20vw;
+    min-width: 300px;
     max-width: none;
     margin: 2vh;
 }
