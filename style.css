@@ -188,3 +188,17 @@ a.current {
     max-width: none;
     margin: 2vh;
 }
+
+.details{
+    display: none;
+}
+
+.details input{
+    margin: 1vh;
+    width: 10vw;
+}
+
+.required-indicator {
+  color: red;
+  margin-left: 5px;
+}

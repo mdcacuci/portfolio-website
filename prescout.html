@@ -39,7 +39,7 @@
         
     <!--      Name-->
           <div class="field, column">
-            <h3 class="label">Name</h3>
+            <h3 class="label">Name<span class="required-indicator">*</span></h3>
             <div class="control">
               <input
                 class="input"
@@ -53,7 +53,7 @@
 
     <!--        Team Number-->
           <div class="field, column">
-            <h3 class="label">Team Number</h3>
+            <h3 class="label">Team Number<span class="required-indicator">*</span></h3>
             <div class="control">
               <input
                 class="input"
@@ -89,7 +89,7 @@
   
 <!--      Drive Type-->
           <div class="field, column">
-            <h3>Drive Type</h3>
+            <h3>Drive Type<span class="required-indicator">*</span></h3>
               
               <input type="radio" id="swerve" name="Drive Type" value="Swerve">
               <label for="swerve">Swerve</label><br>
@@ -99,7 +99,7 @@
           </div>  
         
         <div class="field, column">
-            <h3>Did they Fit Under the Chain?</h3>
+            <h3>Did they Fit Under the Chain?<span class="required-indicator">*</span></h3>
               
               <input type="radio" id="yes" name="Fit under Chain?" value="Yes">
               <label for="yes">Yes</label><br>
@@ -114,32 +114,82 @@
               
             <div class="control">
               <input type="hidden" name="Score Amp?" value="No">           
-              <input type="checkbox" id="option1" name="Score Amp?" value="Yes">
+              <input type="checkbox" class = "capabilities" id="option1" name="Score Amp?" value="Yes">
               <label for="option1">Score in Amp</label><br>  
+                <div class="field, column">
+                    <div class="details">
+                        <input
+                        class="input"
+                        type="text"
+                        placeholder="How?"
+                        name="How Amp?"
+                        /><span class="required-indicator">*</span>
+                    </div>
+                </div>
+            </div>
+              
+            <div class="control">
+              <input type="hidden" name="Score Speaker?" value="No">           
+              <input type="checkbox" class = "capabilities" id="option2" name="Score Speaker?" value="Yes">
+              <label for="option2">Score in Speaker</label><br>  
+                <div class="field, column">
+                    <div class="details">
+                        <input
+                        class="input"
+                        type="text"
+                        placeholder="How?"
+                        name="How Speaker?"
+                        /><span class="required-indicator">*</span>
+                    </div>
+                </div>
+            </div>  
+             
+            <div class="control">
+              <input type="hidden" name="Climbs?" value="No">           
+              <input type="checkbox" class = "capabilities" id="option3" name="Climbs?" value="Yes">
+              <label for="option3">Climb Chain</label><br>  
+                <div class="field, column">
+                    <div class="details">
+                        <input
+                        class="input"
+                        type="text"
+                        placeholder="How?"
+                        name="How Climb?"
+                        /><span class="required-indicator">*</span>
+                    </div>
+                </div>
             </div>  
               
             <div class="control">
-              <input type="hidden" name="Score Speaker?" value="No">     
-              <input type="checkbox" id="option2" name="Score Speaker?" value="Yes">
-              <label for="option2">Score in Speaker</label><br> 
-            </div>  
+              <input type="hidden" name="Score Trap?" value="No">           
+              <input type="checkbox" class = "capabilities" id="option4" name="Score Trap?" value="Yes">
+              <label for="option4">Score in Trap</label><br>  
+                <div class="field, column">
+                    <div class="details">
+                        <input
+                        class="input"
+                        type="text"
+                        placeholder="How?"
+                        name="How Trap?"
+                        /><span class="required-indicator">*</span>
+                    </div>
+                </div>
+            </div>   
               
             <div class="control">
-              <input type="hidden" name="Climbs?" value="No">     
-              <input type="checkbox" id="option3" name="Climbs?" value="Yes">
-              <label for="option3">Climb Chain</label><br> 
-            </div>    
-              
-            <div class="control">
-              <input type="hidden" name="Score Trap?" value="No">     
-              <input type="checkbox" id="option4" name="Score Trap?" value="Yes">
-              <label for="option4">Score in Trap</label><br> 
-            </div>  
-              
-            <div class="control">
-              <input type="hidden" name="Intake?" value="No">     
-              <input type="checkbox" id="option5" name="Intake?" value="Yes">
-              <label for="option5">Intake Notes</label><br> 
+              <input type="hidden" name="Intake?" value="No">           
+              <input type="checkbox" class = "capabilities" id="option5" name="Intake?" value="Yes">
+              <label for="option5">Intake Notes</label><br>  
+                <div class="field, column">
+                    <div class="details">
+                        <input
+                        class="input"
+                        type="text"
+                        placeholder="How?"
+                        name="How Intake?"
+                        /><span class="required-indicator">*</span>
+                    </div>
+                </div>
             </div>  
               
               
@@ -188,7 +238,7 @@
 
     <!--        Auto Notes-->
           <div class="field, column">
-            <h3 class="label">Additional Notes<br>(Details about programs, where they go, where they score, consistency, etc.)<br>(Required)</h3>
+            <h3 class="label">Additional Notes<br>(Details about programs, where they go, where they score, consistency, etc.)<span class="required-indicator">*</span></h3>
             <div class="control">
               <textarea
                 class="input"
@@ -202,12 +252,12 @@
          
 <!--Overall Row-->
     <hr>
-    <h2>Overall (Required)</h2>
+    <h2>Overall</h2>
     <div class="row" >
         
     <!--        Number of Batteries-->
           <div class="field, column">
-            <h3 class="label">Number of Batteries</h3>
+            <h3 class="label">Number of Batteries<span class="required-indicator">*</span></h3>
             <div class="control">
               <input
                 class="input"
@@ -220,7 +270,7 @@
         
     <!--        Overall Notes-->
           <div class="field, column">
-            <h3 class="label"> Additional notes <br>(general feelings about the team/robot, are they weak/strong?, etc.)</h3>
+            <h3 class="label"> Additional notes <br>(general feelings about the team/robot, are they weak/strong?, etc.)<span class="required-indicator">*</span></h3>
             <div class="control">
               <textarea
                 class="input"
@@ -232,7 +282,7 @@
  
         <!--      Rating-->
           <div class="field, column">
-            <h3>Overall Rating Out of 10</h3>
+            <h3>Overall Rating Out of 10<span class="required-indicator">*</span></h3>
               
               <input type="radio" id="1" name="Rating" value="1">
               <label for="1">1</label>
@@ -365,10 +415,14 @@
     </script>     
 
     <script>
-      document.getElementById("generate-qr").addEventListener("click", function (e) {
+     document.getElementById("generate-qr").addEventListener("click", function (e) {
         e.preventDefault(); // Prevent the default form submission
-        generateQRCode(); // Generate QR code
-      });
+        if (validateForm()) {
+            generateQRCode(); // Generate QR code
+        } else {
+            alert("Please fill in all required fields.");
+        }
+});
 
       function generateQRCode() {
         document.getElementById("qrcode").innerHTML = "";  
@@ -386,6 +440,37 @@
           height: 256,
         });
       }
+        
+    function validateForm() {
+  const requiredFields = document.querySelectorAll('input[required], textarea[required]');
+  let isValid = true;
+  requiredFields.forEach(field => {
+    if (!field.value.trim()) {
+      isValid = false;
+      return;
+    }
+  });
+  return isValid;
+}    
+      
+        
+        const checkboxes = document.querySelectorAll('.capabilities');
+
+        checkboxes.forEach(checkbox => {
+          checkbox.addEventListener('change', function() {
+            const details = this.closest('.control').querySelector('.details');
+            const textBox = details.querySelector('input[type="text"]');
+            if (this.checked) {
+              details.style.display = 'block';
+              textBox.required = true;         
+            } else {
+              details.style.display = 'none';
+              textBox.required = false;    
+            }
+          });
+        });
+        
+    
     </script>
       
       
