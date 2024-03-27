@@ -81,14 +81,12 @@ input {
 }
 
 input[type="checkbox"] {
-    transform: scale(2);
     margin: 1vh;
     display: inline-block;
     margin-right: 5px; /* Adjust as needed */
 }
 
 input[type="radio"] {
-    transform: scale(2);
     margin: 1vh;
     display: inline-block;
     margin-right: 5px;
@@ -113,10 +111,12 @@ p {
     text-align: center;
 }
 
-#qrcode img{
-    border: 10px solid #113e67;
+#qrcode {
+    display: none;
+    background-color: white;
     width: 50vw;
     max-width: 300px;
+    border: 10px solid white;
 }
 
 a:hover {

@@ -9,16 +9,16 @@
       rel="stylesheet"
       href="style.css"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bwip-js"></script>
   </head>
     
     
     
   <body>
-    
-    <a href="/">Practice</a>
+      
+    <a href="/">Competition</a>
     <a href="/prescout" class="current">Prescouting</a>
-    <a href="/competition">Competition</a>
+    
       
     <p>#8005 Mega Meadowbots</p><br>
     <center><img src="Logo.png" alt="Mega Meadowbots Logo"></center>
@@ -101,9 +101,9 @@
         <div class="field, column">
             <h3>Did they Fit Under the Chain?<span class="required-indicator">*</span></h3>
               
-              <input type="radio" id="yes" name="Fit under Chain?" value="Yes">
+              <input type="radio" id="yes" name="Fit under Chain?" value="Y">
               <label for="yes">Yes</label><br>
-              <input type="radio" id="no" name="Fit under Chain?" value="No">
+              <input type="radio" id="no" name="Fit under Chain?" value="N">
               <label for="no">No</label><br>
               
           </div>
@@ -373,7 +373,7 @@
     ></div>
             
     <center>
-      <div id="qrcode"></div><br><br>
+      <canvas id="qrcode"></canvas><br><br>
       </center>         
 
             
@@ -463,8 +463,8 @@
       });
     </script>     
 
-    <script>
-     document.getElementById("generate-qr").addEventListener("click", function (e) {
+   <script>
+      document.getElementById("generate-qr").addEventListener("click", function (e) {
         e.preventDefault(); // Prevent the default form submission
         if (validateForm()) {
             generateQRCode(); // Generate QR code
@@ -474,21 +474,47 @@
 });
 
       function generateQRCode() {
-        document.getElementById("qrcode").innerHTML = "";  
-        var formData = new FormData(document.getElementById("form"));
-        var keyValuePairs = [];
-        for (var pair of formData.entries()) {
-          keyValuePairs.push(pair[0] + "=" + pair[1]);
+    document.getElementById("qrcode").style.display = "block";
+    document.getElementById("qrcode").innerHTML = "";
+    var formData = new FormData(document.getElementById("form"));
+    var qrData = [];     
+
+  var iterator = formData.entries();
+var currentPair = iterator.next(); // Get the first pair
+var nextPair = iterator.next(); // Get the second pair
+
+while (!currentPair.done) {
+    var currentValue = currentPair.value[1];
+    var nextValue = nextPair.value ? nextPair.value[1] : null; // Check if next pair exists
+
+    if (currentValue == "No" && nextValue == "Yes") {
+        // Advance the iterator to skip the next pair
+        currentPair = nextPair;
+        nextPair = iterator.next();
+        continue;
+    } else {
+        if (currentValue.trim() !== "") {
+            qrData.push(currentValue);
         }
-        var formDataString = keyValuePairs.join("&");
-        
-        // Generate QR code
-        var qr = new QRCode(document.getElementById("qrcode"), {
-          text: formDataString,
-          width: 256,
-          height: 256,
-        });
-      }
+        // Move both pointers to the next pair
+        currentPair = nextPair;
+        nextPair = iterator.next();
+    }
+}
+
+    var formDataString = qrData.join('\t');
+    console.log(formDataString)      
+
+    // Generate QR code using bwip-js
+    bwipjs.toCanvas(document.getElementById('qrcode'), {
+        bcid: 'qrcode',  // Barcode type: QR code
+        text: formDataString,  // Data to encode
+        scale: 2,  // Adjust the scale to make the QR code smaller
+        width: 120, // Adjust the width here (smaller value)
+        height: 120, // Adjust the height here (smaller value)
+        includetext: false, // Do not include text below the barcode
+    });
+}
         
     function validateForm() {
   const requiredFields = document.querySelectorAll('input[required], textarea[required]');
@@ -502,8 +528,28 @@
   return isValid;
 }    
       
-        
-        const checkboxes = document.querySelectorAll('.capabilities');
+      document.addEventListener('DOMContentLoaded', function() {
+    const increaseButtons = document.querySelectorAll('.button_increase');
+    const decreaseButtons = document.querySelectorAll('.decrease');
+
+    increaseButtons.forEach(function(button) {
+      button.addEventListener('click', function(event) {
+        event.preventDefault();
+        const input = event.target.parentNode.querySelector('input[type="number"]');
+        input.stepUp();
+      });
+    });
+
+    decreaseButtons.forEach(function(button) {
+      button.addEventListener('click', function(event) {
+        event.preventDefault();
+        const input = event.target.parentNode.querySelector('input[type="number"]');
+        input.stepDown();
+      });
+    });
+  });
+       
+       const checkboxes = document.querySelectorAll('.capabilities');
 
         checkboxes.forEach(checkbox => {
           checkbox.addEventListener('change', function() {
@@ -518,8 +564,8 @@
             }
           });
         });
+
         
-    
     </script>
       
       
